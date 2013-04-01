@@ -1,0 +1,33 @@
+<html>
+	<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src = "/scripts/game.js"></script>
+    <script>
+      $(document).ready( function () {
+        window.webkitNotifications.requestPermission();
+
+        (function(){
+        // remove layerX and layerY
+        var all = $.event.props,
+        len = all.length,
+        res = [];
+        while (len--) {
+        var el = all[len];
+        if (el != 'layerX' && el != 'layerY') res.push(el);
+        }
+        $.event.props = res;
+        }());
+      
+        game = new g.Game();
+      });
+      
+    </script>
+	</head>
+	<body style = "background-color: #444;">
+    <div id = "notifications" style = "display: none; color: red; text-align: center; position: absolute; top: 0; left: 0; width: 100%; background-color: rgb(100, 100, 100); opacity: 0.8; height: 30px; font-size: 24pt">
+    </div>
+    <div style = "margin:auto; width: 600px; height: 800px; margin-top: 0px; border: 10px solid #333; border-radius: 5px;">
+    <canvas id ="canvas"></canvas>
+    </div>
+	</body>
+</html>
