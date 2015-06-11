@@ -5,11 +5,5 @@ get '/' do
 end
 
 get '/victory' do
-  
-  
-  
-  
-  
-  
   erb :victory
 end
