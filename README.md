@@ -27,3 +27,4 @@ Installation
 Compile `public/scripts/game.coffee` with any coffeescript compiler.
 
 Install the `sinatra` ruby gem and `ruby app.rb`. You're done.
+tweak
